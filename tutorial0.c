@@ -4,7 +4,6 @@
 #include <stdio.h>
 
 
-
 void SaveFrame(AVFrame *pFrame, int width, int height, int iFrame) ;
 int main(int argc, char *argv[]) {
 // Initalizing these to NULL prevents segfaults!

@@ -17,7 +17,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -D__LIBAVRESAMPLE__ -std=c99")
 
-add_executable(LearningFFMpeg tutorial0.c)
+add_executable(LearningFFMpeg tutorial1.c)
 
 include_directories(".")
 find_package(FFmpeg REQUIRED)
@@ -32,7 +32,7 @@ if (FFMPEG_FOUND)
     message("Found FFMPEG/LibAV libraries")
         message(${FFMPEG_LIBRARIES})
     include_directories(${FFMPEG_INCLUDE_DIR})
-    target_link_libraries (LearningFFMpeg ${FFMPEG_LIBRARIES} "/usr/local/lib/libswscale.dylib")
+    target_link_libraries (LearningFFMpeg ${FFMPEG_LIBRARIES} "/usr/local/lib/libswscale.dylib" "/usr/local/opt/sdl/lib/libSDL-1.2.0.dylib")
 else (FFMPEG_FOUND)
     message("Can't find libavcodec, libavformat or libavutil. Add them!")
 endif (FFMPEG_FOUND)
