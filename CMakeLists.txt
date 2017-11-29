@@ -17,7 +17,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -D__LIBAVRESAMPLE__ -std=c99")
 
-add_executable(LearningFFMpeg tutorial1.c)
+add_executable(LearningFFMpeg tutorial2.c)
 
 include_directories(".")
 find_package(FFmpeg REQUIRED)
